@@ -1,0 +1,22 @@
+#commenters {
+  background-image: url('comments.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#carouselCommenters {
+  background: transparent !important;
+}
+
+.card-comments {
+  padding-top: 100px;
+  background: transparent !important;
+  border: none !important;
+  height: 400px;
+}
+
+.img-comments {
+  border-radius: 50%;
+}

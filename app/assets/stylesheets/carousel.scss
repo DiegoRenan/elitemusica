@@ -2,3 +2,42 @@
   width: 100%;
   max-height: 800px;
 }
+
+.carousel-caption{
+  left:0;
+  right: 0;
+  top:40%;
+  text-align:center;
+}
+
+
+.h2-animated {
+  animation-duration: 3s;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+}
+.p-animated {
+  animation-duration: 3s;
+  animation-delay: 2s;
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-size: 30px;
+}
+
+#carouselExampleFade.carousel-inner{
+  width: 100%;
+    max-height: 40rem;
+
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    z-index: 0;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+}
