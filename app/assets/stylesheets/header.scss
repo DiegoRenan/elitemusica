@@ -1,0 +1,21 @@
+@import 'colors';
+
+.bg-elitemusica {
+  background-color: $primary-color; 
+}
+
+.logo {
+  width: 200px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 1000;
+  // -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  // -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 1px rgb(34, 34, 34);
+    /* the rest of your styling */
+}

@@ -1,0 +1,18 @@
+@import "bootstrap";
+@import "colors";
+
+.btn {
+  border-radius: 30px !important;
+}
+
+footer {
+  background-color: $primary-color;
+}
+
+.copy-right{
+  padding-top: 50px;
+}
+
+.header-btn{
+  border: 2px solid white !important;
+}
