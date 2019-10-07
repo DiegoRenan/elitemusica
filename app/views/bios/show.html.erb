@@ -1,0 +1,15 @@
+<h1>Biografia</h1>
+
+<div class="d-flex flex-row-reverse">
+  <%= link_to "Editar", edit_bio_path(@bio), class: "btn btn-secondary"%>
+</div>
+
+<p>
+  <strong>Resume</strong><br />
+  <%= @bio.resume %>
+</p>
+
+<p>
+  <strong>Biografia<strong><br />
+  <%= @bio.bio %>
+</p>

@@ -4,8 +4,11 @@ class StaticPagesController < ApplicationController
   layout "painel", only: [:painel]
   
   def home
+    @bio = Bio.first
   end
 
   def painel
+    @bio = Bio.first
+    @resume = @bio.resume
   end
 end

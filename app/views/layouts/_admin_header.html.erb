@@ -11,7 +11,10 @@
           <%= link_to "Site", root_path, class: "nav-link"%>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#about-us-link">A Escola</a>
+          <%= link_to "Painel", painel_path, class: "nav-link"%>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Biografia", bio_path(@bio), class: "nav-link"%>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="#aulas-link">Cursos</a>
@@ -28,6 +31,7 @@
         <li class="nav-item active">
           <a class="nav-link" href="#localizacao-link">Localização</a>
         </li>
+        
         <% if user_signed_in? %>
           <li class="nav-item active dropdown">
             <a class="nav-link" 
