@@ -79,6 +79,14 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  # Mail templates will need to use "_url" helpers rather than "_path" helpers
+  # since the template will not have the context of a request
+  # (as a controller does) and thus the full URL will be required to create
+  # links in the email.  This setting defines the host (domain) for the URL.
+
+  config.action_mailer.default_url_options = { :host => ENV['DEFAULT_HOST'] ||
+                                                        'elitemusica.com.br'}
+
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
