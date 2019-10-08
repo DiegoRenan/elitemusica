@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :home_videos, only: [:show, :update, :edit]
   resources :publics
   resources :comments
+  resources :teachers
 end

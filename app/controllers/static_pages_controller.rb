@@ -8,6 +8,7 @@ class StaticPagesController < ApplicationController
     @publics = Public.all
     @video = HomeVideo.first
     @comments = Comment.all
+    @teachers = Teacher.all
   end
 
   def painel

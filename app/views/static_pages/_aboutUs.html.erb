@@ -3,7 +3,9 @@
   <div class="row">
     
     <div class="col-md-6">
-      <%= image_tag @bio.image.variant(resize: "500x500"),  class: "d-block"%>
+      <% if @bio.image.attached? %>
+        <%= image_tag @bio.image.variant(resize: "500x500"),  class: "d-block"%>
+      <% end %>
     </div>
 
     <div class="col-md-6">
