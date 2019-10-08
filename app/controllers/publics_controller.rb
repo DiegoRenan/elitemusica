@@ -34,12 +34,13 @@ class PublicsController < ApplicationController
     if @public.update(public_params)
       redirect_to @public
     else 
-      render 'new'
+      render 'edit'
     end
   end
 
   def destroy
     @public.destroy
+    redirect_to publics_path
   end
 
   private

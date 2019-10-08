@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   get 'files/new'
 
   resources :bios, only: [:show, :update, :edit]
+  resources :home_videos, only: [:show, :update, :edit]
   resources :publics
+  resources :comments
 end

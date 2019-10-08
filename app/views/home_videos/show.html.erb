@@ -1,0 +1,22 @@
+<h1>Video Principal</h1>
+
+<div class="d-flex flex-row-reverse">
+  <%= link_to "Editar", edit_home_video_path(@video), class: "btn btn-secondary"%>
+</div>
+
+<p>
+  <strong>Titulo</strong><br />
+  <%= @video.title %>
+</p>
+
+<p>
+  <strong>Video<strong><br />
+  
+  <div class="row justify-content-center">
+    <iframe width="700" height="300" frameborder="0"
+      src="<%= @video.link %>">
+    </iframe>
+  </div>
+  
+</p>
+

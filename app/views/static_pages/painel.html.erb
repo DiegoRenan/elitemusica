@@ -2,13 +2,28 @@
 
 <div class="d-md-flex flex-row justify-content-start">
 
-<div class="card card-header card-shadow mg-5">
-  <h2><%= link_to "Biografia", bio_path(@bio) %></h2>
+<div class="card text-white bg-secondary mb-3 mg-5" style="max-width: 18rem;">
+  <div class="card-body">
+    <h4><%= link_to "Biografia", bio_path(@bio), class: "card-link" %></h4>
+  </div>
 </div>
 
-<div class="card card-header card-shadow mg-5">
-  <h2><%= link_to "Publico", publics_path %></h2>
+<div class="card text-white bg-secondary mb-3 mg-5" style="max-width: 18rem;">
+  <div class="card-body">
+    <h4><%= link_to "Publico", publics_path, class: "card-link" %></h4>
+  </div>
 </div>
 
+<div class="card text-white bg-secondary mb-3 mg-5" style="max-width: 18rem;">
+  <div class="card-body">
+    <h4><%= link_to "Video Principal", home_video_path(@video), class: "card-link" %></h4>
+  </div>
+</div>
+
+<div class="card text-white bg-secondary mb-3 mg-5" style="max-width: 18rem;">
+  <div class="card-body">
+    <h4><%= link_to "Comentários", comments_path, class: "card-link" %></h4>
+  </div>
+</div>
 
 </div>

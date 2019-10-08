@@ -14,7 +14,7 @@ class BiosController < ApplicationController
     if @bio.update(bio_params)
       redirect_to @bio
     else 
-      render 'new'
+      render 'edit'
     end
   end
 

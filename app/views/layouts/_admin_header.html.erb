@@ -10,28 +10,45 @@
         <li class="nav-item active">
           <%= link_to "Site", root_path, class: "nav-link"%>
         </li>
+        
         <li class="nav-item active">
           <%= link_to "Painel", painel_path, class: "nav-link"%>
         </li>
-        <li class="nav-item active">
-          <%= link_to "Biografia", bio_path(Bio.first), class: "nav-link"%>
+
+        <li class="nav-item active dropdown">
+          
+          <a class="nav-link" 
+              href="#" 
+              id="homeDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true" 
+              aria-expanded="false"
+            >
+            <%= icon('fas', 'caret-down') %>
+            Home Page
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="homeDropdown">
+
+            <% if !Bio.first.nil? %>
+              <%= link_to "Biografia", bio_path(Bio.first), class: "dropdown-item"%>
+            <% end %>
+          
+            <%= link_to "Temos turmas para", publics_path, class: "dropdown-item"%>
+            
+            <% if !HomeVideo.first.nil? %>
+              <%= link_to "Home Video", home_video_path(HomeVideo.first), class: "dropdown-item"%>
+            <% end %>
+            
+            <%= link_to "Comentários", comments_path, class: "dropdown-item"%>
+            
+            <a class="dropdown-item" href="#contato-link">Contatos</a>
+
+          </div>
+
         </li>
-        <li class="nav-item active">
-          <%= link_to "Temos turmas para", publics_path, class: "nav-link"%>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#turmas-link">Turmas</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#eventos-link">Eventos</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#contato-link">Contatos</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#localizacao-link">Localização</a>
-        </li>
-        
+    
         <% if user_signed_in? %>
           <li class="nav-item active dropdown">
             <a class="nav-link" 

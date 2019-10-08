@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_08_164928) do
+ActiveRecord::Schema.define(version: 2019_10_08_193813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,20 @@ ActiveRecord::Schema.define(version: 2019_10_08_164928) do
   create_table "bios", force: :cascade do |t|
     t.text "resume"
     t.text "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "name"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "home_videos", force: :cascade do |t|
+    t.string "title"
+    t.string "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

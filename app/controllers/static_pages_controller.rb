@@ -6,10 +6,13 @@ class StaticPagesController < ApplicationController
   def home
     @bio = Bio.first
     @publics = Public.all
+    @video = HomeVideo.first
+    @comments = Comment.all
   end
 
   def painel
     @bio = Bio.first
     @resume = @bio.resume
+    @video = HomeVideo.first
   end
 end
