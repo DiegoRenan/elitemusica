@@ -13,3 +13,9 @@
   <strong>Biografia<strong><br />
   <%= @bio.bio %>
 </p>
+
+<p>
+  <strong>Imagem<strong><br />
+  <%= image_tag @bio.image.variant(resize: "500x500") %>
+</p>
+

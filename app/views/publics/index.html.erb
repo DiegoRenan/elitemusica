@@ -1,0 +1,31 @@
+<div class="d-flex flex-row-reverse">
+  <%= link_to "Novo", new_public_path, class: "btn btn-danger"%>
+</div>
+<h1>Publico</h1>
+
+<div clas="d-flex flex-column">
+
+<% @publics.each do |publico| %>
+
+<div class="d-flex flex-row-reverse">
+  <%= link_to "Editar", edit_public_path(publico), class: "btn btn-secondary"%>
+</div>
+
+<p>
+  <strong>Título</strong><br />
+  <%= publico.title %>
+</p>
+
+<p>
+  <strong>Resume</strong><br />
+  <%= publico.resume %>
+</p>
+
+<p>
+  <strong>Imagem<strong><br />
+  <%= image_tag publico.image.variant(resize: "200x200") %>
+</p>
+
+<% end %>
+
+</div>

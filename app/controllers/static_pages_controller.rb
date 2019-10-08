@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
   
   def home
     @bio = Bio.first
+    @publics = Public.all
   end
 
   def painel

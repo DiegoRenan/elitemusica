@@ -13,11 +13,12 @@
   </head>
 
   <body>
-    <%= render 'layouts/admin_header' %>
+
+    <%= render 'layouts/admin_header' unless controller.controller_name == "sessions"%>
     <main class="container">
       <%= render 'layouts/alerts' %>
       <%= yield %>
     </main>
-    <%= render 'layouts/footer' %>
+    <%= render 'layouts/footer' unless controller.controller_name == "sessions" %>
   </body>
 </html>

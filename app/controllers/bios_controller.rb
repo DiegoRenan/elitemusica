@@ -25,7 +25,7 @@ class BiosController < ApplicationController
     end
 
     def bio_params
-      params.require(:bio).permit(:resume, :bio)
+      params.require(:bio).permit(:resume, :bio, :image)
     end
 
 end
