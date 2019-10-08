@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   resources :publics
   resources :comments
   resources :teachers
+  resources :contacts, only: [:show, :update, :edit] 
 end

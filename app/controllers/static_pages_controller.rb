@@ -4,16 +4,18 @@ class StaticPagesController < ApplicationController
   layout "painel", only: [:painel]
   
   def home
-    @bio = Bio.first
+    @bio = Bio.last
     @publics = Public.all
-    @video = HomeVideo.first
+    @video = HomeVideo.last
     @comments = Comment.all
     @teachers = Teacher.all
+    @contact = Contact.last
   end
 
   def painel
     @bio = Bio.first
     @resume = @bio.resume
-    @video = HomeVideo.first
+    @video = HomeVideo.last
+    @contact = Contact.last
   end
 end

@@ -36,16 +36,39 @@ namespace :dev do
       # puts "Bio created"
 
 
+      # ############## VIDEO ####################
+
+      # puts "Creating video"
+
+      # HomeVideo.create!(
+      #   title: "Apresentação do coral da Escola",
+      #   link: "https://www.youtube.com/watch?v=aGOFOrbh3aI"
+      # )
+
+      # puts "Video created"
+
+
       ############## VIDEO ####################
 
-      puts "Creating video"
+      puts "Creating contato"
 
-      HomeVideo.create!(
-        title: "Apresentação do coral da Escola",
-        link: "https://www.youtube.com/watch?v=aGOFOrbh3aI"
+      Contact.create!(
+        rua: "Av. Minístro João Alberto", 
+        numero: "x", 
+        cep: "76240-000",
+        cidade: 'Aragarças',
+        uf: 'GO',
+        phone_cell: '(xx) xxxxx - xxxxx',
+        phone_fixed: '(xx) xxxxx - xxxxx',
+        whatsapp: '(xx) xxxxx - xxxxx',
+        att_week: '08:00 - 21:00',
+        att_weekend: '08:00 - 12:00',
+        email: 'xxxxxx@xxxxxxxxxxxx.com',
+        facebook: '',
+        instagram: ''
       )
 
-      puts "Video created"
+      puts "Contact created"
 
     end
 

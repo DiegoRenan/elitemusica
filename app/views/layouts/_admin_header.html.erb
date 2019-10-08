@@ -45,12 +45,14 @@
             
             <%= link_to "Professores", teachers_path, class: "dropdown-item"%>
 
-            <a class="dropdown-item" href="#contato-link">Contatos</a>
-
           </div>
 
         </li>
-    
+        
+        <li class="nav-item active">
+          <%= link_to "Contato", contact_path(Contact.first), class: "nav-link"%>
+        </li>
+
         <% if user_signed_in? %>
           <li class="nav-item active dropdown">
             <a class="nav-link" 
