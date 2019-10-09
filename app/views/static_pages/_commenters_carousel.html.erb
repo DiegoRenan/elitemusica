@@ -1,21 +1,22 @@
   <div id="carouselCommenters" class="carousel slide carousel" data-ride="carousel">
     <div class="carousel-inner">
-     <% if !@comments.nil? %>
         <div class="carousel-item active">
           <div class="card card-comments">
-            <center>
-              <% if @comments.first.image.attached? %> 
-                <%= image_tag @comments.first.image, class: 'img-comments', width: '100px'%>
-              <% end %>
-                <p >
-                  <h4 class="text-white">
-                    <%= @comments.first.comment%>
-                  <h4>
-                </p>
-                <p>
-                  <h4 class="text-info"><%= @comments.first.name %></h4> 
-                </p>
-            </center>
+            <% if !@comments.empty? %>
+              <center>
+                <% if @comments.first.image.attached? %> 
+                  <%= image_tag @comments.first.image, class: 'img-comments', width: '100px'%>
+                <% end %>
+                  <p >
+                    <h4 class="text-white">
+                      <%= @comments.first.comment%>
+                    <h4>
+                  </p>
+                  <p>
+                    <h4 class="text-info"><%= @comments.first.name %></h4> 
+                  </p>
+              </center>
+            <% end %>
           </div>
         </div>
 
@@ -40,8 +41,6 @@
             </div>
           <% end %>
         <% end %>
-        
-      <% end %>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
