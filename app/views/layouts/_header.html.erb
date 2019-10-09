@@ -28,6 +28,26 @@
         <li class="nav-item active">
           <a class="nav-link" href="#localizacao-link">Localização</a>
         </li>
+        <% if user_signed_in? %>
+          <li class="nav-item active dropdown">
+            <a class="nav-link" 
+               href="#" 
+               id="userDropdown"
+               role="button"
+               data-toggle="dropdown"
+               aria-haspopup="true" 
+               aria-expanded="false"
+              >
+              <%= icon('fas', 'user') %>
+              <%= current_user.name %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="userDropdown">
+              <%= link_to "Configurações", painel_path,  class: "dropdown-item" %>
+              <div class="dropdown-divider"></div>
+              <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% end %>
       </ul>
       <div class="navbar-nav mr-auto">
         <li class="nav-item active">

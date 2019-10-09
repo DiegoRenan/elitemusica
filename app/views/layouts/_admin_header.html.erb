@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-danger" id="header">
+  <div class="container">
+    <%= image_tag 'logo.png', class: "navbar-brand d-block logo" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <%= link_to "Site", root_path, class: "nav-link"%>
+        </li>
+        
+        <li class="nav-item active">
+          <%= link_to "Painel", painel_path, class: "nav-link"%>
+        </li>
+
+        <li class="nav-item active dropdown">
+          
+          <a class="nav-link" 
+              href="#" 
+              id="homeDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true" 
+              aria-expanded="false"
+            >
+            <%= icon('fas', 'caret-down') %>
+            Home Page
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="homeDropdown">
+
+            <% if !Bio.first.nil? %>
+              <%= link_to "Biografia", bio_path(Bio.first), class: "dropdown-item"%>
+            <% end %>
+          
+            <%= link_to "Temos turmas para", publics_path, class: "dropdown-item"%>
+            
+            <% if !HomeVideo.first.nil? %>
+              <%= link_to "Home Video", home_video_path(HomeVideo.first), class: "dropdown-item"%>
+            <% end %>
+            
+            <%= link_to "Comentários", comments_path, class: "dropdown-item"%>
+            
+            <%= link_to "Professores", teachers_path, class: "dropdown-item"%>
+
+          </div>
+
+        </li>
+        
+        <li class="nav-item active">
+          <%= link_to "Contato", contact_path(Contact.first), class: "nav-link"%>
+        </li>
+
+        <% if user_signed_in? %>
+          <li class="nav-item active dropdown">
+            <a class="nav-link" 
+               href="#" 
+               id="userDropdown"
+               role="button"
+               data-toggle="dropdown"
+               aria-haspopup="true" 
+               aria-expanded="false"
+              >
+              <%= icon('fas', 'user') %>
+              <%= current_user.name %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="userDropdown">
+              <%= link_to "Configurações", painel_path,  class: "dropdown-item" %>
+              <div class="dropdown-divider"></div>
+              <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+      <div class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <button class="btn btn-danger btn-block header-btn"> Matrícule-se </button>
+        </li>
+      </div>
+    </div>
+    </div>
+</nav>

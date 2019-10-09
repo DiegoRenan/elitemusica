@@ -1,0 +1,23 @@
+<%= form_for(@bio) do |f|%>
+
+  <%= render 'devise/shared/error_messages', resource: f.object %>
+
+  <div class="form-group field">
+    <%= f.label :resume %><br />
+    <%= f.text_area :resume, maxlength: 600, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio, maxlength: 2000, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Salvar", class: "btn btn-secondary btn-block" %>
+  </div>
+
+<% end %>

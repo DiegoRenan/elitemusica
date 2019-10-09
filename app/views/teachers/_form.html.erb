@@ -1,0 +1,33 @@
+<%= form_for(@teacher) do |f|%>
+
+  <%= render 'devise/shared/error_messages', resource: f.object %>
+
+  <div class="form-group field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, maxlength: 30, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :job %><br />
+    <%= f.text_field :job, maxlength: 30, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :facebook %><br />
+    <%= f.text_field :facebook, maxlength: 300, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :instagram %><br />
+    <%= f.text_field :instagram, maxlength: 300, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Salvar", class: "btn btn-secondary btn-block" %>
+  </div>
+
+<% end %>

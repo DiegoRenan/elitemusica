@@ -9,8 +9,8 @@
           <%= image_tag ('address.png'), width: '50px'%>
         </div>
         <div class="contato-text">
-          110 E 16th St
-          New York, NY
+          <%= @contact.rua%>, <%= @contact.numero%><br />
+          <%= @contact.cidade%> - <%= @contact.uf%><br />
         </div>
       </div>
     </div>
@@ -22,8 +22,8 @@
           <%= image_tag ('contact.png'), width: '50px', class: 'img-contato'%>
         </div>
         <div class="contato-text">
-         (66) 9 9211 - 2132 / 9211 - 2132 <br />
-          E-mail: escola@elitemusica.com <br />
+         <%= @contact.whatsapp%> / <%= @contact.phone_fixed %> <br />
+          E-mail: <%= @contact.email %> <br />
         </div>
       </div>
     </div>
@@ -35,8 +35,8 @@
           <%= image_tag ('clock.png'), width: '50px'%>
         </div>
         <div class="contato-text">
-          Monday - Friday: 12pm - 8pm <br />
-          Saturday: 10am - 2pm
+          Segunda - Sexta: <%= @contact.att_week %> <br />
+          Sábado: <%= @contact.att_weekend %>
         </div>
       </div>
     </div>
@@ -46,8 +46,8 @@
         <div class="contato-img">
         </div>
         <div class="contato-text ">
-          110 E 16th St
-          New York, NY
+          <%= link_to image_tag('fb.png', width: '50px'), @contact.instagram, target: :_blank%>
+          <%= link_to image_tag('instragram.png', width: '50px'), @contact.instagram, target: :_blank %>
         </div>
     </div>
   

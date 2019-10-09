@@ -1,0 +1,41 @@
+<h1>Painel</h1>
+
+<div class="d-md-flex flex-row justify-content-start">
+
+<div class="card text-white bg-secondary mb-3 mg-5" style="max-width: 18rem;">
+  <div class="card-body">
+    <h4><%= link_to "Biografia", bio_path(@bio), class: "card-link" %></h4>
+  </div>
+</div>
+
+<div class="card text-white bg-secondary mb-3 mg-5" style="max-width: 18rem;">
+  <div class="card-body">
+    <h4><%= link_to "Publico", publics_path, class: "card-link" %></h4>
+  </div>
+</div>
+
+<div class="card text-white bg-secondary mb-3 mg-5" style="max-width: 18rem;">
+  <div class="card-body">
+    <h4><%= link_to "Video Principal", home_video_path(@video), class: "card-link" %></h4>
+  </div>
+</div>
+
+<div class="card text-white bg-secondary mb-3 mg-5" style="max-width: 18rem;">
+  <div class="card-body">
+    <h4><%= link_to "Comentários", comments_path, class: "card-link" %></h4>
+  </div>
+</div>
+
+<div class="card text-white bg-secondary mb-3 mg-5" style="max-width: 18rem;">
+  <div class="card-body">
+    <h4><%= link_to "Professores", teachers_path, class: "card-link" %></h4>
+  </div>
+</div>
+
+<div class="card text-white bg-secondary mb-3 mg-5" style="max-width: 18rem;">
+  <div class="card-body">
+    <h4><%= link_to "Contato", contact_path(@contact), class: "card-link" %></h4>
+  </div>
+</div>
+
+</div>

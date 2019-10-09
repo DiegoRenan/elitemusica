@@ -1,0 +1,46 @@
+<div class="d-flex flex-row-reverse">
+  <%= link_to "Novo", new_teacher_path, class: "btn btn-danger"%>
+</div>
+<h1>Professores</h1>
+
+<div clas="d-flex flex-column">
+
+<% @teachers.each do |teacher| %>
+
+  <div class="d-flex flex-row-reverse">
+    <%= link_to 'Deletar', teacher, method: :delete, data: { confirm: "Deseja deletar este professor?" }, class: "btn btn-secondary"%>
+    <%= link_to "Editar", edit_teacher_path(teacher), class: "btn btn-secondary"%>
+  </div>
+
+  <p>
+    <strong>Nome</strong><br />
+    <%= teacher.name %>
+  </p>
+
+  <p>
+    <strong>Disciplina</strong><br />
+    <%= teacher.job %>
+  </p>
+
+  <p>
+    <strong>Facebook Link</strong><br />
+    <%= teacher.facebook %>
+  </p>
+  
+  <p>
+    <strong>Instagram Link</strong><br />
+    <%= teacher.instagram %>
+  </p>
+
+  <p>
+    <strong>Imagem</strong><br />
+    <% if teacher.image.attached?%>
+      <%= image_tag teacher.image.variant(resize: "200x200") %>
+    <% end %>
+  </p>
+
+  <hr />
+
+<% end %>
+
+</div>

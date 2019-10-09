@@ -1,0 +1,70 @@
+<h1>Contato</h1>
+
+<div class="d-flex flex-row-reverse">
+  <%= link_to "Editar", edit_contact_path(@contact), class: "btn btn-secondary"%>
+</div>
+
+<p>
+  <strong>Rua</strong><br />
+  <%= @contact.rua %>
+</p>
+
+<p>
+  <strong>Número</strong><br />
+  <%= @contact.numero %>
+</p>
+
+<p>
+  <strong>CEP</strong><br />
+  <%= @contact.cep%>
+</p>
+
+<p>
+  <strong>Cidade</strong><br />
+  <%= @contact.cidade %>
+</p>
+
+<p>
+  <strong>UF</strong><br />
+  <%= @contact.uf %>
+</p>
+
+<p>
+  <strong>Email</strong><br />
+  <%= @contact.email %>
+</p>
+
+<p>
+  <strong>Celular</strong><br />
+  <%= @contact.phone_cell %>
+</p>
+
+<p>
+  <strong>Telefone Fixo</strong><br />
+  <%= @contact.phone_fixed %>
+</p>
+
+<p>
+  <strong>WhatsApp</strong><br />
+  <%= @contact.whatsapp %>
+</p>
+
+<p>
+  <strong>Facebook Link</strong><br />
+  <%= @contact.facebook %>
+</p>
+
+<p>
+  <strong>Instagram Link</strong><br />
+  <%= @contact.instagram %>
+</p>
+
+<p>
+  <strong>Horário de atendimento na Semana</strong><br />
+  <%= @contact.att_week %>
+</p>
+
+<p>
+  <strong>Horário de atendimento no Sabado </strong><br />
+  <%= @contact.att_weekend %>
+</p>
