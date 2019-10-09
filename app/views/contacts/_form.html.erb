@@ -1,0 +1,64 @@
+<%= form_for(@contact) do |f|%>
+
+  <%= render 'devise/shared/error_messages', resource: f.object %>
+
+  <div class="form-group field">
+    <%= f.label :rua %><br />
+    <%= f.text_field :rua, maxlength: 300, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :numero %><br />
+    <%= f.text_field :numero, maxlength: 300, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :cidade %><br />
+    <%= f.text_field :cidade, maxlength: 300, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :uf %><br />
+    <%= f.text_field :uf, maxlength: 300, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :cep %><br />
+    <%= f.text_field :cep, maxlength: 300, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, maxlength: 300, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <label>Telefone Celular</label><br />
+    <%= f.text_field :phone_cell, maxlength: 14, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <label>Telefone Fixo</label><br />
+    <%= f.text_field :phone_fixed, maxlength: 14, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <label>WhatsApp</label><br />
+    <%= f.text_field :whatsapp, maxlength: 14, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <label>Facebook Link</label><br />
+    <%= f.text_field :facebook, maxlength: 300, class: "form-control"  %>
+  </div>
+
+  <div class="form-group field">
+    <label>Instagram Link</label><br />
+    <%= f.text_field :instagram, maxlength: 300, class: "form-control"  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Salvar", class: "btn btn-secondary btn-block" %>
+  </div>
+
+<% end %>

@@ -1,5 +1,7 @@
 @import "bootstrap";
 @import "colors";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 .btn {
   border-radius: 30px !important;
@@ -9,10 +11,43 @@ footer {
   background-color: $primary-color;
 }
 
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
 .copy-right{
   padding-top: 50px;
 }
 
 .header-btn{
   border: 2px solid white !important;
+}
+
+.mg-5 {
+  margin: 5px;
+}
+
+main {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  min-height: 340px;
+}
+
+.login-box {
+  margin-top: 20px;
+  padding: 15px;
+  margin-bottom: 40px; 
+}
+
+.card-shadow{
+  box-shadow: 2px 2px 2px #cdcdcd;
+}
+
+a.card-link {
+  color: #fff;
 }

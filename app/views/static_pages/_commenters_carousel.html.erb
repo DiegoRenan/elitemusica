@@ -1,56 +1,45 @@
   <div id="carouselCommenters" class="carousel slide carousel" data-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="card card-comments">
-          <center> 
-            <%= image_tag 'fk1.jpg', class: 'img-comments', width: '100px'%>
-            <p >
-              <h4 class="text-white">
-              "Some quick example text to build on the card.
-              Some quick example text to build on <br />the card.
-               Some quick example text to build on the card. "
-               <h4>
-            </p>
-            <p>
-              <h4 class="text-info">Louis Flores</h4> 
-            </p>
-          </center>
+     <% if !@comments.nil? %>
+        <div class="carousel-item active">
+          <div class="card card-comments">
+            <center> 
+                <%= image_tag @comments.first.image, class: 'img-comments', width: '100px'%>
+                <p >
+                  <h4 class="text-white">
+                    <%= @comments.first.comment%>
+                  <h4>
+                </p>
+                <p>
+                  <h4 class="text-info"><%= @comments.first.name %></h4> 
+                </p>
+            </center>
+          </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <div class="card card-comments">
-          <center> 
-            <%= image_tag 'fk2.jpg', class: 'img-comments', width: '100px'%>
-            <p >
-              <h4 class="text-white">
-              "Some quick example text to build on the card.
-              Some quick example text to build on <br />the card.
-               Some quick example text to build on the card. "
-               <h4>
-            </p>
-            <p>
-              <h4 class="text-info">Louis Flores</h4> 
-            </p>
-          </center>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="card card-comments">
-          <center> 
-            <%= image_tag 'fk3.jpg', class: 'img-comments', width: '100px'%>
-            <p >
-              <h4 class="text-white">
-              "Some quick example text to build on the card.
-              Some quick example text to build on <br />the card.
-               Some quick example text to build on the card. "
-               <h4>
-            </p>
-            <p>
-              <h4 class="text-info">Louis Flores</h4> 
-            </p>
-          </center>
-        </div>
-      </div>
+
+        <% @comments.each do |comment| %>
+          <% if @comments.first.id != comment.id%>
+            <div class="carousel-item">
+              <div class="card card-comments">
+                <center>
+                  <% if comment.image.attached?%>
+                    <%= image_tag comment.image, class: 'img-comments', width: '100px'%>
+                  <% end %>
+                  <p >
+                    <h4 class="text-white">
+                      <%= comment.comment%>
+                    <h4>
+                  </p>
+                  <p>
+                    <h4 class="text-info"><%= comment.name %></h4> 
+                  </p>
+                </center>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+        
+      <% end %>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -1,0 +1,31 @@
+<h1><%= @teacher.name %></h1>
+
+<div class="d-flex flex-row-reverse">
+  <%= link_to 'Deletar', @teacher, method: :delete, data: { confirm: "Deseja deletar este professor?" }, class: "btn btn-secondary"%>
+  <%= link_to "Editar", edit_teacher_path(@teacher), class: "btn btn-secondary"%>
+  <%= link_to "Novo", new_teacher_path, class: "btn btn-danger"%>
+</div>
+
+<p>
+  <strong>Job</strong><br />
+  <%= @teacher.job %>
+</p>
+
+<p>
+  <strong>Facebook Link</strong><br />
+  <%= @teacher.facebook %>
+</p>
+
+<p>
+  <strong>Instagram Link</strong><br />
+  <%= @teacher.instagram %>
+</p>
+
+
+<p>
+  <strong>Imagem<strong><br />
+  <% if @teacher.image.attached?%>
+    <%= image_tag @teacher.image.variant(resize: "200x200") %>
+  <% end %>
+</p>
+

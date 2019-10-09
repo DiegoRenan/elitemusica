@@ -1,0 +1,20 @@
+<h1><%= @comment.name %></h1>
+
+<div class="d-flex flex-row-reverse">
+  <%= link_to 'Deletar', @comment, method: :delete, data: { confirm: "Deseja deletar este commentário?" }, class: "btn btn-secondary"%>
+  <%= link_to "Editar", edit_comment_path(@comment), class: "btn btn-secondary"%>
+  <%= link_to "Novo", new_comment_path, class: "btn btn-danger"%>
+</div>
+
+<p>
+  <strong>Comentário</strong><br />
+  <%= @comment.comment %>
+</p>
+
+<p>
+  <strong>Imagem<strong><br />
+  <% if @comment.image.attached?%>
+    <%= image_tag @comment.image.variant(resize: "200x200") %>
+  <% end %>
+</p>
+
