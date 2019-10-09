@@ -1,6 +1,6 @@
   <div id="carouselCommenters" class="carousel slide carousel" data-ride="carousel">
     <div class="carousel-inner">
-     <% if !@comments.nil?%>
+     <% if !@comments.nil? %>
         <div class="carousel-item active">
           <div class="card card-comments">
             <center> 
@@ -11,7 +11,7 @@
                   <h4>
                 </p>
                 <p>
-                  <h4 class="text-info"><%= @comments.last.name %></h4> 
+                  <h4 class="text-info"><%= @comments.first.name %></h4> 
                 </p>
             </center>
           </div>
