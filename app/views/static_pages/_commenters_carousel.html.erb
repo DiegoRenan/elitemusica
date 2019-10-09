@@ -3,8 +3,10 @@
      <% if !@comments.nil? %>
         <div class="carousel-item active">
           <div class="card card-comments">
-            <center> 
+            <center>
+              <% if comment.image.attached? %> 
                 <%= image_tag @comments.first.image, class: 'img-comments', width: '100px'%>
+              <% end %>
                 <p >
                   <h4 class="text-white">
                     <%= @comments.first.comment%>
@@ -22,7 +24,7 @@
             <div class="carousel-item">
               <div class="card card-comments">
                 <center>
-                  <% if comment.image.attached?%>
+                  <% if comment.image.attached? %>
                     <%= image_tag comment.image, class: 'img-comments', width: '100px'%>
                   <% end %>
                   <p >
