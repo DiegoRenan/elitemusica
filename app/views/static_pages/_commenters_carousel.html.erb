@@ -1,45 +1,45 @@
   <div id="carouselCommenters" class="carousel slide carousel" data-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="card card-comments">
-          <center>
-            <% if Comment.last.image.attached?%> 
-              <%= image_tag Comment.last.image, class: 'img-comments', width: '100px'%>
-            <% end %>
-            <p >
-              <h4 class="text-white">
-                <%= Comment.last.comment%>
-              <h4>
-            </p>
-            <p>
-              <h4 class="text-info"><%= Comment.last.name %></h4> 
-            </p>
-          </center>
-        </div>
-      </div>
-
-      <% @comments.each do |comment| %>
-        <% if Comment.first.id != comment.id%>
-          <div class="carousel-item">
-            <div class="card card-comments">
-              <center>
-                <% if comment.image.attached?%>
-                  <%= image_tag comment.image, class: 'img-comments', width: '100px'%>
-                <% end %>
+     <% if !@comments.nil?%>
+        <div class="carousel-item active">
+          <div class="card card-comments">
+            <center> 
+                <%= image_tag @comments.first.image, class: 'img-comments', width: '100px'%>
                 <p >
                   <h4 class="text-white">
-                    <%= comment.comment%>
+                    <%= @comments.first.comment%>
                   <h4>
                 </p>
                 <p>
-                  <h4 class="text-info"><%= comment.name %></h4> 
+                  <h4 class="text-info"><%= @comments.last.name %></h4> 
                 </p>
-              </center>
-            </div>
+            </center>
           </div>
+        </div>
+
+        <% @comments.each do |comment| %>
+          <% if @comments.first.id != comment.id%>
+            <div class="carousel-item">
+              <div class="card card-comments">
+                <center>
+                  <% if comment.image.attached?%>
+                    <%= image_tag comment.image, class: 'img-comments', width: '100px'%>
+                  <% end %>
+                  <p >
+                    <h4 class="text-white">
+                      <%= comment.comment%>
+                    <h4>
+                  </p>
+                  <p>
+                    <h4 class="text-info"><%= comment.name %></h4> 
+                  </p>
+                </center>
+              </div>
+            </div>
+          <% end %>
         <% end %>
+        
       <% end %>
-      
     </div>
     <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
