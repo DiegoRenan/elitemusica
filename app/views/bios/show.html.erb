@@ -16,6 +16,8 @@
 
 <p>
   <strong>Imagem<strong><br />
-  <%= image_tag @bio.image.variant(resize: "500x500") %>
+  <% if @bio.image.attached? %>
+    <%= image_tag @bio.image.variant(resize: "500x500") %>
+  <% end %>
 </p>
 
